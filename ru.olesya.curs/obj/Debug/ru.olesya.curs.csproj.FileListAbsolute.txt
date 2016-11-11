@@ -1,0 +1,5 @@
+c:\users\nikit\onedrive\documents\visual studio 2015\Projects\ConsoleApplication5\ru.olesya.curs\bin\Debug\ru.olesya.curs.exe.config
+c:\users\nikit\onedrive\documents\visual studio 2015\Projects\ConsoleApplication5\ru.olesya.curs\bin\Debug\ru.olesya.curs.exe
+c:\users\nikit\onedrive\documents\visual studio 2015\Projects\ConsoleApplication5\ru.olesya.curs\bin\Debug\ru.olesya.curs.pdb
+c:\users\nikit\onedrive\documents\visual studio 2015\Projects\ConsoleApplication5\ru.olesya.curs\obj\Debug\ru.olesya.curs.exe
+c:\users\nikit\onedrive\documents\visual studio 2015\Projects\ConsoleApplication5\ru.olesya.curs\obj\Debug\ru.olesya.curs.pdb
