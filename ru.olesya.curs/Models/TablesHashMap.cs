@@ -58,6 +58,18 @@ namespace ru.olesya.curs.Models
             }
             return tables;
         }
+
+        public void WriteDictionary()
+        {
+            Console.WriteLine(" Хеш | Номер | Название | Значение");
+            foreach (var pair in dictionary)
+            {
+                foreach (var table in pair.Value)
+                {
+                    Console.WriteLine(pair.Key.ToString()+ ";" + table.ToString());
+                }
+            }
+        }
         // Словарь(Карта) хешей и списков табличных строк
         private Dictionary<long, List<Table>> dictionary = new Dictionary<long, List<Table>>();
     }

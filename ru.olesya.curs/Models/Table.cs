@@ -5,25 +5,23 @@ namespace ru.olesya.curs.Models
 {
     public struct Table
     {
-        private readonly long code;
-        private readonly string type;
-        private readonly double price;
-        public long Code { get { return code; }
-            set { }
-        }
-//        public override int GetHashCode()
-//        {
-//            int result;
-//            long temp;
-//            temp = (code);
-//            result = (int)(temp ^ 
-//                (temp >> 32));
-//            result = (int)(temp ^
-//                (temp >> 32));
-//            //            temp = (price);
-//            //            result = 31 * result + (int)(temp ^ (temp >> 32));
-//            return result;
-//        }
+        public long code { get; set; }
+        public  string type { get; set; }
+        public double price { get; set; }
+
+        //        public override int GetHashCode()
+        //        {
+        //            int result;
+        //            long temp;
+        //            temp = (code);
+        //            result = (int)(temp ^ 
+        //                (temp >> 32));
+        //            result = (int)(temp ^
+        //                (temp >> 32));
+        //            //            temp = (price);
+        //            //            result = 31 * result + (int)(temp ^ (temp >> 32));
+        //            return result;
+        //        }
         public override int GetHashCode()
         {
             //code<<5 сдвинет 0b1010101 на 5 влево,code>>5 вправо, ^ сделает XOR

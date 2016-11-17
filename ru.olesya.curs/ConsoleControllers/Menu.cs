@@ -15,7 +15,8 @@ namespace ru.olesya.curs.ConsoleControllers
                                 "3. Поиск элемента\n" +
                                 "4. Удаление элемента\n" +
                                 "5. Сохранение кода\n" +
-                                "6. Выход из программы\n");
+                                "6. Выход из программы\n" +
+                                "7. Сортировки\n");
             string a = null;
             int result;
             while (!int.TryParse(a, out result)) a = Console.ReadLine();
@@ -50,8 +51,16 @@ namespace ru.olesya.curs.ConsoleControllers
             for (double i = 0; i < 5000; i++)
             {
                 Console.Clear();
-                Console.WriteLine("Выход будет выполнен через" + i/ 5000 * 100);
+                Console.WriteLine("Процесс выхода" + i/ 5000 * 100 + "%");
             }
+        }
+        public int Sort()
+        {
+            Console.WriteLine("1 - По первому; 2 - по второму; 3 - по третьему; 4 - обратная:\n");
+            string a = null;
+            int result;
+            while (!int.TryParse(a, out result)) a = Console.ReadLine();
+            return result;
         }
 
     }

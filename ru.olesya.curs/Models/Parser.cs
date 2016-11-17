@@ -50,13 +50,17 @@ namespace ru.olesya.curs.Models
             }
                 return false;
         }
+        public bool DeleteTable(Table table)
+        {
+            return Tables.Remove(table);
+        }
         //Запись в файл(сохранение)
         public void WriteTables()
         {
             // Если вдруг понадобится в документы сохранять
             //var mydocpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
-            using (var outputFile = new StreamWriter(filepath + @"\Table.txt", true))
+            using (var outputFile = new StreamWriter(filepath + @"\Table.txt", false))
             {
                 foreach (var table in Tables)
                 {
@@ -66,6 +70,40 @@ namespace ru.olesya.curs.Models
             }
         }
 
+        public void Print(int op)
+        {
+            switch (op)
+            {
+                
+                case 1:
+                    Tables.Sort(delegate(Table x, Table y)
+                    {
+                       return x.code.CompareTo(y.code);
+                    });
+                break;
+                case 2:
+                    Tables.Sort(delegate (Table x, Table y)
+                    {
+                        return x.type.CompareTo(y.type);
+                    });
+                    break;
+                case 3:
+                    Tables.Sort(delegate (Table x, Table y)
+                    {
+                        return x.price.CompareTo(y.price);
+                    });
+                    break;
+                case 4:
+                    Tables.Reverse();
+                    break;
+
+            }
+            foreach (var table in Tables)
+            {
+                Console.WriteLine(table.ToString());
+            }
+
+        }
         private string filepath = "";//Путь к файлу(присваевается в конструкторе класса)
         public static List<Table> Tables = new List<Table>(); //Таблица
         public static List<Table> ATables { get { return Tables; } set {} }//функции считки и записи поля Tables

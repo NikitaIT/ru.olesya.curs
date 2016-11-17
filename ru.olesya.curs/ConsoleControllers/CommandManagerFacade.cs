@@ -29,6 +29,7 @@ namespace ru.olesya.curs.ConsoleControllers
             var isRun = true;
             while (isRun)
             {
+                tablesHashMap.WriteDictionary();
                 switch (menu.ViewMenu())
                 {
                     case (int) MenuBtn.GENERATION_HASH_TABLE:
@@ -53,6 +54,7 @@ namespace ru.olesya.curs.ConsoleControllers
                             var listofTable =
                                 tablesHashMap.Find(new Table(long.Parse(tableRow[0]), tableRow[1],
                                     double.Parse(tableRow[2])));
+                                if (listofTable !=null)
                             foreach (var table in listofTable)
                                 Console.WriteLine(table.ToString());
                         }
@@ -70,7 +72,12 @@ namespace ru.olesya.curs.ConsoleControllers
                             if (
                                 tablesHashMap.Delete(new Table(long.Parse(tableRow[0]), tableRow[1],
                                     double.Parse(tableRow[2]))))
-                                Console.WriteLine("Удалено");
+                            {
+                                    parser.DeleteTable(new Table(long.Parse(tableRow[0]), tableRow[1],
+                                    double.Parse(tableRow[2])));
+                                    Console.WriteLine("Удалено или не существует ");
+                                }
+                                
                             else
                                 Console.WriteLine("Не удалено");
                         else
@@ -89,6 +96,12 @@ namespace ru.olesya.curs.ConsoleControllers
                         menu.Exit();
                         isRun = false;
                     }
+                        break;
+                    case (int)MenuBtn.SORT:
+                        {
+                            parser.Print(menu.Sort());
+                            Console.ReadKey();
+                        }
                         break;
                     default:
                         Console.WriteLine("Default case");

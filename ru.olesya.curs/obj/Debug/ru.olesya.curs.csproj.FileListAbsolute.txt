@@ -3,3 +3,4 @@ c:\users\nikit\onedrive\documents\visual studio 2015\Projects\ConsoleApplication
 c:\users\nikit\onedrive\documents\visual studio 2015\Projects\ConsoleApplication5\ru.olesya.curs\bin\Debug\ru.olesya.curs.pdb
 c:\users\nikit\onedrive\documents\visual studio 2015\Projects\ConsoleApplication5\ru.olesya.curs\obj\Debug\ru.olesya.curs.exe
 c:\users\nikit\onedrive\documents\visual studio 2015\Projects\ConsoleApplication5\ru.olesya.curs\obj\Debug\ru.olesya.curs.pdb
+C:\Users\NIKIT\OneDrive\Documents\Visual Studio 2015\Projects\ConsoleApplication5\ru.olesya.curs\obj\Debug\ru.olesya.curs.csprojResolveAssemblyReference.cache

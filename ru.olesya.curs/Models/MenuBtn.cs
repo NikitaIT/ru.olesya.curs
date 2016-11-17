@@ -10,6 +10,7 @@
         FIND,
         DELETE,
         SAVE,
-        EXET
+        EXET,
+        SORT
     }
 }
